@@ -31,7 +31,7 @@ public class CommandDifferentialDrivetrain extends SubsystemBase {
         return this;
       }
 
-      public TankRequest withZRotation(double rightSpeed) {
+      public TankRequest withRightSpeed(double rightSpeed) {
         this.rightSpeed = rightSpeed;
         return this;
       }
