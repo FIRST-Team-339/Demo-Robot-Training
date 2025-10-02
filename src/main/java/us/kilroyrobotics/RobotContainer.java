@@ -9,8 +9,6 @@ import edu.wpi.first.wpilibj2.command.button.CommandJoystick;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import us.kilroyrobotics.Constants.OperatorConstants;
-import us.kilroyrobotics.commands.Autos;
-import us.kilroyrobotics.commands.ExampleCommand;
 import us.kilroyrobotics.subsystems.ExampleSubsystem;
 
 /**
