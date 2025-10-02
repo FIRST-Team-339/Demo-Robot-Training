@@ -17,6 +17,26 @@ public class CommandDifferentialDrivetrain extends SubsystemBase {
   public interface DriveRequest {
     public void apply(DifferentialDrive drive);
 
+    public static class TankRequest implements DriveRequest {
+      public double leftSpeed;
+      public double rightSpeed;
+
+      @Override
+      public void apply(DifferentialDrive drive) {
+          drive.tankDrive(leftSpeed, rightSpeed);
+      }
+
+      public TankRequest withLeftSpeed(double leftSpeed) {
+        this.leftSpeed = leftSpeed;
+        return this;
+      }
+
+      public TankRequest withZRotation(double rightSpeed) {
+        this.rightSpeed = rightSpeed;
+        return this;
+      }
+    }
+
     public static class ArcadeRequest implements DriveRequest {
       public double xSpeed;
       public double zRotation;
